@@ -295,6 +295,18 @@
   .verdict.bad { color: #F2A25C; }
   .verdict.good { color: #6FD3E2; }
 
+  /* ---------- gallery ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
+  @media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .gallery { grid-template-columns: 1fr; } }
+  .gallery figure { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+  .gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+  .gallery figcaption { padding: 14px 16px; font-size: .88rem; color: var(--muted); }
+  .gallery figcaption b { color: var(--ink); display: block; margin-bottom: 2px; }
+  .compare-photo { margin: 30px auto 0; max-width: 760px; }
+  .compare-photo img { width: 100%; border-radius: 14px; border: 1px solid rgba(255,255,255,.18); display: block; }
+  .compare-photo figcaption { text-align: center; font-size: .88rem; color: var(--on-deep-muted); margin-top: 10px; }
+
   /* ---------- steps ---------- */
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; counter-reset: step; }
   @media (max-width: 900px) { .steps { grid-template-columns: repeat(2, 1fr); } }
@@ -541,6 +553,36 @@
         <h3>Чиста труба на повний діаметр</h3>
         <p>Високий тиск змиває жир і наріст зі стінок повністю. Забудете про проблему на роки.</p>
       </div>
+    </div>
+    <figure class="compare-photo">
+      <img src="foto-do-pislya.jpg" alt="Каналізаційна труба до та після гідродинамічної прочистки" loading="lazy" width="1000" height="560">
+      <figcaption>Труба до та після гідродинамічної прочистки</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="tehnika">
+  <div class="wrap">
+    <span class="eyebrow">Обладнання</span>
+    <h2>Наша техніка</h2>
+    <p class="lead">Працюємо професійним обладнанням — саме воно дає результат, який тримається роками, а не до наступного місяця.</p>
+    <div class="gallery">
+      <figure>
+        <img src="foto-hidrodynamika.jpg" alt="Гідродинамічна установка для прочистки каналізації, тиск до 200 бар, шланг 50 метрів" loading="lazy" width="1000" height="1000">
+        <figcaption><b>Гідродинамічна установка</b>Тиск до 200 бар, шланг 50 м — зовнішня каналізація 110–200 мм</figcaption>
+      </figure>
+      <figure>
+        <img src="foto-camera.jpg" alt="Камера відеодіагностики каналізаційних труб з монітором і записом" loading="lazy" width="1000" height="1000">
+        <figcaption><b>Камера відеодіагностики</b>Огляд труби зсередини до 50 м — бачимо причину, а не вгадуємо</figcaption>
+      </figure>
+      <figure>
+        <img src="foto-trosy.jpg" alt="Машина зі спіралями та насадками для механічної прочистки труб" loading="lazy" width="1000" height="1000">
+        <figcaption><b>Механічна прочистка</b>Спіралі та насадки для внутрішніх труб 32–160 мм</figcaption>
+      </figure>
+      <figure>
+        <img src="foto-baraban.jpg" alt="Барабанна машина для прочистки внутрішньої каналізації" loading="lazy" width="1000" height="1000">
+        <figcaption><b>Барабанна машина</b>Кухні, ванни та стояки у квартирах і будинках</figcaption>
+      </figure>
     </div>
   </div>
 </section>
